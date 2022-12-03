@@ -26,3 +26,6 @@ crash.log пропускаем, исключить файл между crash и 
 * Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+* Выполнение ДЗ Основы гит 2.2.
+
