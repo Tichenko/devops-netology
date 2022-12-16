@@ -47,21 +47,20 @@
 
 * Ответ: vagrant@vagrant:~$ dig dns.google
 *      ;; ANSWER SECTION:
-*  dns.google.		626	IN	A	8.8.4.4
-*  dns.google.		626	IN	A	8.8.8.8
+   dns.google.          626     IN      A       8.8.4.4
+*  dns.google.          626     IN      A       8.8.8.8
+
 
 * 8 Проверьте PTR записи для IP адресов из задания 7. Какое доменное имя привязано к IP? Воспользуйтесь утилитой dig
 * В качестве ответов на вопросы приложите лог выполнения команд в консоли или скриншот полученных результатов.
 
 * Ответ: vagrant@vagrant:~$ dig -x 8.8.4.4
+*   ;; ANSWER SECTION:
+*   4.4.8.8.in-addr.arpa.       7057    IN      PTR     dns.google.
+*   dig -x 8.8.8.8
 
 *   ;; ANSWER SECTION:
-*   4.4.8.8.in-addr.arpa.	7057	IN	PTR	dns.google.
-
-*  dig -x 8.8.8.8
-
-*   ;; ANSWER SECTION:
-*   8.8.8.8.in-addr.arpa.	7127	IN	PTR	dns.google.
+*   8.8.8.8.in-addr.arpa.       7127    IN      PTR     dns.google.
 
 * В задании прописано: " В качестве ответов на вопросы можно приложите лог выполнения команд в консоли или скриншот полученных результатов." Прикладываю файл со скринами.
 
