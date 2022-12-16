@@ -26,9 +26,9 @@ location: https://stackoverflow.com/questions
 
 * Ответ:
 
-   route:          46.241.0.0/17
-   netname:        RU-ZSTTK-20101223
-   origin:         AS21127
+*   route:          46.241.0.0/17
+*   netname:        RU-ZSTTK-20101223
+*   origin:         AS21127
 
  Провайдер -JSC Zap-Sib TransTeleCom JSC Zap-Sib TransTeleCom AS21127 ZSTTKAS
 
