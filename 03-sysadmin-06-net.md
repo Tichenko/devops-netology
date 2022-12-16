@@ -27,18 +27,18 @@
 
 * Ответ:
 
-*   route:          46.241.0.0/17
-*   netname:        RU-ZSTTK-20101223
-*   origin:         AS21127
+   route:          46.241.0.0/17
+   netname:        RU-ZSTTK-20101223
+   origin:         AS21127
 
-* Провайдер -JSC Zap-Sib TransTeleCom JSC Zap-Sib TransTeleCom AS21127 ZSTTKAS
+ Провайдер -JSC Zap-Sib TransTeleCom JSC Zap-Sib TransTeleCom AS21127 ZSTTKAS
 
 * 5.Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой traceroute
 
 * Ответ: vagrant@vagrant:~$ sudo traceroute -n 8.8.8.8
-*     AS21127 – ZSTTK
-*     AS20485 - TRANSTELECOM
-*     AS15169 – Google
+     AS21127 – ZSTTK
+     AS20485 - TRANSTELECOM
+     AS15169 – Google
 
 * 6. Повторите задание 5 в утилите mtr. На каком участке наибольшая задержка - delay?
 * Ответ:  Наибольшая средняя задержка (delay) на последнем хопе – 55 мс
