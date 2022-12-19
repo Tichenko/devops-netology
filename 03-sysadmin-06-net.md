@@ -57,14 +57,48 @@
 * 8 Проверьте PTR записи для IP адресов из задания 7. Какое доменное имя привязано к IP? Воспользуйтесь утилитой dig
  В качестве ответов на вопросы приложите лог выполнения команд в консоли или скриншот полученных результатов.
 
-* Ответ: vagrant@vagrant:~$ dig -x 8.8.4.4
+* Ответ: vagrant@vagrant:~$ dig -x 8.8.8.8
 
-*  ;; ANSWER SECTION:
-*   4.4.8.8.in-addr.arpa.       7057    IN      PTR     dns.google.
-*   dig -x 8.8.8.8
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.8.8
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8407
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
-*    ;; ANSWER SECTION:
-*    8.8.8.8.in-addr.arpa.       7127    IN      PTR     dns.google.
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;8.8.8.8.in-addr.arpa.          IN      PTR
+
+;; ANSWER SECTION:
+8.8.8.8.in-addr.arpa.   7167    IN      PTR     dns.google.
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Mon Dec 19 02:46:05 UTC 2022
+;; MSG SIZE  rcvd: 73
+
+* vagrant@vagrant:~$ dig -x 8.8.4.4
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.4.4
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29356
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;4.4.8.8.in-addr.arpa.          IN      PTR
+
+;; ANSWER SECTION:
+4.4.8.8.in-addr.arpa.   57054   IN      PTR     dns.google.
+
+;; Query time: 3 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Mon Dec 19 02:58:49 UTC 2022
+;; MSG SIZE  rcvd: 73
+
 
 
 * В задании прописано: " В качестве ответов на вопросы можно приложите лог выполнения команд в консоли или скриншот полученных результатов." Прикладываю файл со скринами.
