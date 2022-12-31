@@ -17,10 +17,10 @@
 +   B        46.241.0.0/17 [20/0] via 64.71.137.241, 3w5d
 +   B     146.241.0.0/16 [20/0] via 217.192.89.50, 5w6d
 
-* route-views> show ip route | i 46.241.0.0
+#### route-views> show ip route | i 46.241.0.0
 + B        46.241.0.0/17 [20/0] via 64.71.137.241, 3w5d
 + B     146.241.0.0/16 [20/0] via 217.192.89.50, 5w6d
-+ route-views>show bgp 46.241.9.2
+#### route-views>show bgp 46.241.9.2
 + BGP routing table entry for 46.241.0.0/17, version 2588539228
 + Paths: (22 available, best #21, table default)
 +  Not advertised to any peer
@@ -81,24 +81,24 @@
 * 3.Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.
 
 * Ответ: vagrant@vagrant:~$ sudo ss -tulpn
-Netid  State   Recv-Q  Send-Q    Local Address:Port      Peer Address:Port  Process
-udp    UNCONN  0       0             127.0.0.1:8125           0.0.0.0:*      users:(("netdata",pid=1504,fd=15))
-udp    UNCONN  0       0         127.0.0.53%lo:53             0.0.0.0:*      users:(("systemd-resolve",pid=612,fd=12))
-udp    UNCONN  0       0        10.0.2.15%eth0:68             0.0.0.0:*      users:(("systemd-network",pid=610,fd=19))
-tcp    LISTEN  0       4096          127.0.0.1:8125           0.0.0.0:*      users:(("netdata",pid=1504,fd=16))
-tcp    LISTEN  0       4096          127.0.0.1:19999          0.0.0.0:*      users:(("netdata",pid=1504,fd=4))
-tcp    LISTEN  0       4096      127.0.0.53%lo:53             0.0.0.0:*      users:(("systemd-resolve",pid=612,fd=13))
-tcp    LISTEN  0       128             0.0.0.0:22             0.0.0.0:*      users:(("sshd",pid=696,fd=3))
-tcp    LISTEN  0       128                [::]:22                [::]:*      users:(("sshd",pid=696,fd=4))
+- Netid  State   Recv-Q  Send-Q    Local Address:Port      Peer Address:Port  Process
+- udp    UNCONN  0       0             127.0.0.1:8125           0.0.0.0:*      users:(("netdata",pid=1504,fd=15))
+- udp    UNCONN  0       0         127.0.0.53%lo:53             0.0.0.0:*      users:(("systemd-resolve",pid=612,fd=12))
+- udp    UNCONN  0       0        10.0.2.15%eth0:68             0.0.0.0:*      users:(("systemd-network",pid=610,fd=19))
+- tcp    LISTEN  0       4096          127.0.0.1:8125           0.0.0.0:*      users:(("netdata",pid=1504,fd=16))
+- tcp    LISTEN  0       4096          127.0.0.1:19999          0.0.0.0:*      users:(("netdata",pid=1504,fd=4))
+- tcp    LISTEN  0       4096      127.0.0.53%lo:53             0.0.0.0:*      users:(("systemd-resolve",pid=612,fd=13))
+- tcp    LISTEN  0       128             0.0.0.0:22             0.0.0.0:*      users:(("sshd",pid=696,fd=3))
+- tcp    LISTEN  0       128                [::]:22                [::]:*      users:(("sshd",pid=696,fd=4))
 
 * vagrant@vagrant:~$ ss -t -a
-State        Recv-Q       Send-Q              Local Address:Port                 Peer Address:Port        Process
-LISTEN       0            4096                    127.0.0.1:8125                      0.0.0.0:*
-LISTEN       0            4096                    127.0.0.1:19999                     0.0.0.0:*
-LISTEN       0            4096                127.0.0.53%lo:domain                    0.0.0.0:*
-LISTEN       0            128                       0.0.0.0:ssh                       0.0.0.0:*
-ESTAB        0            0                       10.0.2.15:ssh                      10.0.2.2:62634
-LISTEN       0            128                          [::]:ssh                          [::]:*
+- State        Recv-Q       Send-Q              Local Address:Port                 Peer Address:Port        Process
+- LISTEN       0            4096                    127.0.0.1:8125                      0.0.0.0:*
+- LISTEN       0            4096                    127.0.0.1:19999                     0.0.0.0:*
+- LISTEN       0            4096                127.0.0.53%lo:domain                    0.0.0.0:*
+- LISTEN       0            128                       0.0.0.0:ssh                       0.0.0.0:*
+- ESTAB        0            0                       10.0.2.15:ssh                      10.0.2.2:62634
+- LISTEN       0            128                          [::]:ssh                          [::]:*
 
 * SSH-22 порт
 * DNS -53 порт
@@ -106,10 +106,10 @@ LISTEN       0            128                          [::]:ssh                 
 * 4. Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения ис* пользуют эти порты?
 
 * Ответ: vagrant@vagrant:~$ ss -u -a
-State        Recv-Q       Send-Q               Local Address:Port                 Peer Address:Port       Process
-UNCONN       0            0                        127.0.0.1:8125                      0.0.0.0:*
-UNCONN       0            0                    127.0.0.53%lo:domain                    0.0.0.0:*
-UNCONN       0            0                   10.0.2.15%eth0:bootpc                    0.0.0.0:*
+- State        Recv-Q       Send-Q               Local Address:Port                 Peer Address:Port       Process
+- UNCONN       0            0                        127.0.0.1:8125                      0.0.0.0:*
+- UNCONN       0            0                    127.0.0.53%lo:domain                    0.0.0.0:*
+- UNCONN       0            0                   10.0.2.15%eth0:bootpc                    0.0.0.0:*
 
 #### 53 прт dns
 #### 68 порт bootpc
