@@ -1,10 +1,10 @@
 * 1. Есть скрипт:
 
-### a=1
-### b=2
-### c=a+b
-### d=$a+$b
-### e=$(($a+$b))
+##### a=1
+##### b=2
+##### c=a+b
+##### d=$a+$b
+##### e=$(($a+$b))
 
 * Ответ: 
 + с - значение a+b по умолчанию значение переменной - строка, вывели строку содержащую символы
@@ -15,61 +15,61 @@
 
 * Задача 2.
 
-##### while ((1==1)
-##### do
-#####	curl https://localhost:4757
-#####	if (($? != 0))
-#####	then
-#####		date >> curl.log
-#####	fi
-##### done
+while ((1==1)
+do
+	curl https://localhost:4757
+	if (($? != 0))
+	then
+		date >> curl.log
+	fi
+done
 
 
 * Ответ:
 
-# while ((1==1))
+while ((1==1)
 do
-        curl https://localhost:4757
-        if (($? != 0))
-        then
-                echo `date` >> curl.log
-        fi
+	curl https://localhost:4757
+	if (($? != 0))
+	then
+		echo 'date' >> curl.log
+	fi
 done
 
 * задача 3. Необходимо написать скрипт, который проверяет доступность трёх IP: 192.168.0.1, 173.194.222.113, 87.250.250.242 по 80......
 
 * Ответ:
-# for (( i = 1; i <= 5; i++ ))
-do
-	echo "Start $i:"
-for host in "192.168.0.1" "173.194.222.113" "87.250.250.242"
-do
-	echo "Try $host"
-	timeout 5 nc -vz $host 80 2>> curl.log
-	if (($? != 0))
-	then
-		echo "Can't connect to $host and port 80" >> curl.log
-	fi
-done
-done
+##### for (( i = 1; i <= 5; i++ ))
+##### do
+#####	echo "Start $i:"
+##### for host in "192.168.0.1" "173.194.222.113" "87.250.250.242"
+##### do
+#####	echo "Try $host"
+#####	timeout 5 nc -vz $host 80 2>> curl.log
+#####	if (($? != 0))
+#####	then
+#####		echo "Can't connect to $host and port 80" >> curl.log
+#####	fi
+##### done
+##### done
 
 * Задача 4. Необходимо дописать скрипт из предыдущего задания так, чтобы он выполнялся до тех пор, пока один из узлов не окажется недоступным.....
 
 * Ответ: 
-#for (( i = 1; i <= 5; i++ ))
-do
-	echo "Start $i:"
-for host in "192.168.0.1" "173.194.222.113" "87.250.250.242"
-do
-	echo "Try $host"
-	timeout 5 nc -vz $host 80 2>> curl.log
-	if (($? != 0))
-	then
-		echo "$host" >> error.log
-		exit 1
-	fi
-done
-done
+##### for (( i = 1; i <= 5; i++ ))
+##### do
+#####	echo "Start $i:"
+##### for host in "192.168.0.1" "173.194.222.113" "87.250.250.242"
+##### do
+#####	echo "Try $host"
+#####	timeout 5 nc -vz $host 80 2>> curl.log
+#####	if (($? != 0))
+#####	then
+#####		echo "$host" >> error.log
+#####		exit 1
+#####	fi
+##### done
+##### done
 
 
 
