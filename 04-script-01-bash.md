@@ -15,17 +15,17 @@
 
 * Задача 2.
 
-##### while ((1==1)
-##### do
-#####	curl https://localhost:4757
-#####	if (($? != 0))
-#####	then
-#####		date >> curl.log
-#####	fi
-##### done
+while ((1==1)
+do
+	curl https://localhost:4757
+	if (($? != 0))
+	then
+		date >> curl.log
+	fi
+done
 
 
-* Ответ:
+* Ответ: 
 
 ##### while ((1==1))
 ##### do
