@@ -34,15 +34,16 @@ Status: Downloaded newer image for postgres:12
 docker.io/library/postgres:12
 
 ```
+
+```
 vagrant@server1:~$ docker image ls
 REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
 postgres                   12        2c278af658a7   2 weeks ago     373MB
 tilchenko/nginx            latest    f7308dac1d9b   4 weeks ago     142MB
 
 ```
+
 ```
-
-
 postgres=# \l
                                  List of databases
    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges
@@ -168,7 +169,9 @@ Referenced by:
     TABLE "clients" CONSTRAINT "clients_booking_fkey" FOREIGN KEY (booking) REFERENCES orders(id)
    
 ```
+
 * SQL-запрос для выдачи списка пользователей с правами над таблицами test_db;
+
 
 ```
 postgres=# select * from INFORMATION_SCHEMA.TABLE_PRIVILEGES where grantee in ('test-admin-user', 'test-simple-user');
@@ -223,7 +226,9 @@ ble | with_hierarchy
 (22 rows)
 
 ```
+
 * список пользователей с правами над таблицами test_db.
+
 
 ```
 postgres=# \du
@@ -235,6 +240,7 @@ postgres=# \du
  test-simple-user | Cannot login
 
 ```
+
 ### Задача 3
 
 Используя SQL-синтаксис, наполните таблицы следующими тестовыми данными:
@@ -255,7 +261,9 @@ postgres=# select * from orders;
 (5 rows)
 
 ```
+
 Таблица clients
+
 
 ```
 postgres=# insert into clients VALUES (1, 'Иванов Иван Иванович', 'USA'), (2, 'Петров Петр Петрович', 'Canada'), (3, 'Иоганн Себастьян Бах', 'Japan'), (4, 'Ронни Джеймс Дио', 'Russia'), (5, 'Ritchie Blackmore', 'Russia');
@@ -271,7 +279,8 @@ postgres=# select * from clients;
 (5 rows)
 
 ```
-Используя SQL синтаксис вычислите количество записей для каждой таблицы
+
+* Используя SQL синтаксис вычислите количество записей для каждой таблицы
 приведите в ответе:
 * запросы
 * результаты их выполнения.
@@ -295,7 +304,9 @@ postgres=#
 
 ```
 
+
 ### Задача 4
+
 
 Часть пользователей из таблицы clients решили оформить заказы из таблицы orders
 
@@ -309,6 +320,7 @@ postgres=#
 * Петров Петр Петрович - монитор;
 * Иоганн Себастьян Бах - гитару.
 
+
 ```
 postgres=# update  clients set booking = 3 where id = 1;
 UPDATE 1
@@ -317,6 +329,8 @@ UPDATE 1
 postgres=# update  clients set booking = 5 where id = 3;
 UPDATE 1
 postgres=#
+
+```
 
 ```
 postgres=# select * from clients as c where  exists (select id from orders as o where c.booking = o.i
@@ -336,8 +350,8 @@ d);
 
 Приведите получившийся результат и объясните, что значат полученные значения.
 
-```
 
+```
 postgres=# explain select * from clients where booking is not null;
                         QUERY PLAN
 -----------------------------------------------------------
@@ -357,7 +371,9 @@ postgres=# explain select * from clients where booking is not null;
 
 * width — средний размер одной строки в байтах.
 
+
 ### Задача 6
+
 
 * Создайте бэкап БД test_db и поместите его в volume, предназначенный для бэкапов (см. задачу 1).
 
@@ -366,12 +382,12 @@ postgres=# explain select * from clients where booking is not null;
 postgres=# \q
 root@e0a5f36bba87:/# pg_dump -U postgres test_db -f /var/lib/postgresql/backup/dump_test_db.sql
 
-``
+```
 
 * Остановите контейнер с PostgreSQL, но не удаляйте volumes.
 
-```
 
+```
 root@server1:~# docker ps
 CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS        PORTS                                       NAMES
 e0a5f36bba87   postgres:12   "docker-entrypoint.s…"   24 hours ago   Up 24 hours   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   pg_docker
@@ -385,8 +401,8 @@ root@server1:~#
 
 * Поднимите новый пустой контейнер с PostgreSQL.
 
-```
 
+```
 root@server1:~# docker run -d --name pg-netology-2 -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v vol-1-pg-base:/var/lib/postgresql/data -v vol-2-pg-backup:/var/lib/postgresql/backup postgres:12
 pg-netology-2
 2cecef2042c26333a404aa8aa0516fee5350b510d48db72121dce0b7266ac3dc
@@ -398,6 +414,7 @@ root@server1:~#
 ```
 
 * Восстановите БД test_db в новом контейнере.
+
 
 ```
 root@server1:~# docker exec -it pg-netology-2 bash 
@@ -422,7 +439,9 @@ postgres=# \l
 
 ```
 
+
 * Приведите список операций, который вы применяли для бэкапа данных и восстановления.
+
 
 ```
 postgres=# drop database test_db;
@@ -449,7 +468,6 @@ root@2cecef2042c2:/# psql -U postgres
 psql (12.14 (Debian 12.14-1.pgdg110+1))
 Type "help" for help.
 postgres=# \l (  результаты есть выше) 
-
 
 ```
 
