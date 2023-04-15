@@ -103,4 +103,41 @@ OOM Killer - процесс, который завершает приложен�
 - секционировать большие таблицы (партиционирование)
 - настроить swap на сервере (это немного замедлит работу, но поможет эффективно высвобождать ресурсы)
 
+#### Дороботка "настроить PostgreSQL и выделить достаточный объём памяти".
 
+* Установка:
+
+```
+vagrant@server1:~$ sudo -i -u postgres
+postgres@server1:~$ psql
+psql (12.14 (Ubuntu 12.14-0ubuntu0.20.04.1))
+Type "help" for help.
+
+postgres@server1:~$ systemctl status postgresql
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
+     Active: active (exited) since Wed 2023-04-12 14:46:56 UTC; 10min ago
+   Main PID: 4797 (code=exited, status=0/SUCCESS)
+      Tasks: 0 (limit: 1107)
+     Memory: 0B
+     CGroup: /system.slice/postgresql.service
+
+```
+-Настройка.Создала пользователя и БД:
+
+```
+postgres=# \password postgres
+Enter new password for user "postgres":
+Enter it again:
+postgres=# create user info_comp with password '11111';
+CREATE ROLE
+postgres=# create database Test;
+CREATE DATABASE
+postgres=# grant all privileges on database Test to info_comp;
+GRANT
+postgres=# \q
+postgres@server1:~$
+
+```
+
+* Выделение памяти !?i
