@@ -6,7 +6,8 @@
 
 Чтобы получить зачёт, вам нужно предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
 
-* Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+* Ответ:
+  
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/abac4b43-8d79-41fe-ad9e-c2656c65c8f4)
 
 ### Задача 2
@@ -15,7 +16,9 @@
 
 2.2. (Необязательное задание)
 
-*  Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+*  Ответ:
+  ![image](https://github.com/Tichenko/devops-netology/assets/116817153/b680bb61-bfd8-4f43-a49b-3680aab65a7a)
+
 
 ### Задача 3
 
@@ -23,7 +26,10 @@
 
 Чтобы получить зачёт, вам нужно предоставить вывод команды "docker ps" , все контейнеры, описанные в docker-compose, должны быть в статусе "Up".
 
-*  Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+*  Ответ:
+
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/e4a70ce3-79fb-417e-bcbb-a05221dbbd1c)
+
 
 ### Задача 4
 
@@ -33,7 +39,9 @@
 4. Подождите 5-10 минут, чтобы система мониторинга успела накопить данные.
 Чтобы получить зачёт, предоставьте скриншот работающего веб-интерфейса Grafana с текущими метриками.
 
-* Ответ: https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/editI
+* Ответ:
+  ![image](https://github.com/Tichenko/devops-netology/assets/116817153/3e0b9753-1c4c-4d16-a373-b853f4671258)
+
 
 
 
