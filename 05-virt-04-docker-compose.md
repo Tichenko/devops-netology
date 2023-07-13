@@ -7,6 +7,7 @@
 Чтобы получить зачёт, вам нужно предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
 
 * Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/abac4b43-8d79-41fe-ad9e-c2656c65c8f4)
 
 ### Задача 2
 
