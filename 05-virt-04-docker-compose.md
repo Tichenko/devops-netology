@@ -40,7 +40,8 @@
 Чтобы получить зачёт, предоставьте скриншот работающего веб-интерфейса Grafana с текущими метриками.
 
 * Ответ:
-  ![image](https://github.com/Tichenko/devops-netology/assets/116817153/3e0b9753-1c4c-4d16-a373-b853f4671258)
+  ![image](https://github.com/Tichenko/devops-netology/assets/116817153/ba3215f2-09fd-4a39-a909-97a0a8bb2e43)
+
 
 
 
