@@ -6,6 +6,7 @@
 
 ![img1](https://github.com/Tichenko/devops-netology/assets/116817153/31e9280d-a54e-4c93-b9de-7fd60d85a9fb)
 
+Файлы с решением задания 1 (измененные _cloud-init.yml_, _main.tf_ и _variables.tf_) находятся в папке _demonstration1/_
 
 ### Задание 2
 Вывод команды ```terraform output```:
