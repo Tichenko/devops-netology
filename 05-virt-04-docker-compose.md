@@ -6,15 +6,17 @@
 
 Чтобы получить зачёт, вам нужно предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
 
-* Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+* Ответ:
 
+![img_2.png](img_2.png)
 ### Задача 2
 
 2.1. Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.
 
-2.2. (Необязательное задание)
+2.2. (Необgitязательное задание).
 
-*  Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+*  Ответ: 
+![img_4.png](img_4.png)
 
 ### Задача 3
 
@@ -22,7 +24,9 @@
 
 Чтобы получить зачёт, вам нужно предоставить вывод команды "docker ps" , все контейнеры, описанные в docker-compose, должны быть в статусе "Up".
 
-*  Ответ: скрин https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/edit
+*  Ответ: 
+
+![img_11.png](img_11.png)
 
 ### Задача 4
 
@@ -32,7 +36,6 @@
 4. Подождите 5-10 минут, чтобы система мониторинга успела накопить данные.
 Чтобы получить зачёт, предоставьте скриншот работающего веб-интерфейса Grafana с текущими метриками.
 
-* Ответ: https://docs.google.com/document/d/1WWoztvg-mNGyyIb9VAL6wJ1-AkXY20FoDiEqc6FvQG4/editI
+* Ответ:
 
-
-
+![img_10.png](img_10.png)

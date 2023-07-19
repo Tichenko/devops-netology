@@ -21,7 +21,6 @@ Hey, Netology
 * Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
 ##### Ответ : https://hub.docker.com/r/tilchenko/nginx
-
 ```
 vagrant@server1:~$ curl 127.0.1:8080
 <html> <head> Hey, Netology </head> <body> <h1>I’m DevOps Engineer!</h1> </body> </html>
