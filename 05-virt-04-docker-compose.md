@@ -7,6 +7,11 @@
 Чтобы получить зачёт, вам нужно предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
 
 * Ответ:
+<<<<<<< HEAD
+=======
+  
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/abac4b43-8d79-41fe-ad9e-c2656c65c8f4)
+>>>>>>> a9aedfb439bebf376d286fdfd38820ca08df652e
 
 ![img_2.png](img_2.png)
 ### Задача 2
@@ -15,8 +20,14 @@
 
 2.2. (Необgitязательное задание).
 
+<<<<<<< HEAD
 *  Ответ: 
 ![img_4.png](img_4.png)
+=======
+*  Ответ:
+  ![image](https://github.com/Tichenko/devops-netology/assets/116817153/b680bb61-bfd8-4f43-a49b-3680aab65a7a)
+
+>>>>>>> a9aedfb439bebf376d286fdfd38820ca08df652e
 
 ### Задача 3
 
@@ -24,9 +35,16 @@
 
 Чтобы получить зачёт, вам нужно предоставить вывод команды "docker ps" , все контейнеры, описанные в docker-compose, должны быть в статусе "Up".
 
+<<<<<<< HEAD
 *  Ответ: 
 
 ![img_11.png](img_11.png)
+=======
+*  Ответ:
+
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/e4a70ce3-79fb-417e-bcbb-a05221dbbd1c)
+
+>>>>>>> a9aedfb439bebf376d286fdfd38820ca08df652e
 
 ### Задача 4
 
@@ -37,5 +55,13 @@
 Чтобы получить зачёт, предоставьте скриншот работающего веб-интерфейса Grafana с текущими метриками.
 
 * Ответ:
+<<<<<<< HEAD
+=======
+  ![image](https://github.com/Tichenko/devops-netology/assets/116817153/ba3215f2-09fd-4a39-a909-97a0a8bb2e43)
+
+
+
+
+>>>>>>> a9aedfb439bebf376d286fdfd38820ca08df652e
 
 ![img_10.png](img_10.png)
