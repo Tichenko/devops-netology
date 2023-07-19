@@ -66,4 +66,5 @@ No modules.
 
 ![img4](https://github.com/Tichenko/devops-netology/assets/116817153/20def169-aa85-47d0-a942-a9e01e3b1b08)
 
-![img5](https://github.com/Tichenko/devops-netology/assets/116817153/4db85d8f-e7bf-405c-9317-c1a868a555d)
+![img5](https://github.com/Tichenko/devops-netology/assets/116817153/5c37d8c2-1f76-4fc3-910b-2650ad8d6870)
+
