@@ -14,7 +14,6 @@
 ответы на вопросы.
 
 Ответ:
-
 4. Суть допущенных ошибок заключается в том, чтобы мы поняли, что при неправильном указании параметров для инициализации ресурса этот ресурс не сможет быть создан, а при их исправлении и перезапуске команды terraform apply те ресурсы, которые уже были созданы, не будут пересоздаваться.  
 
 5. Параметр ```preemptible = true``` отвечает за то, что создаваемая ВМ будет прерываемой, то есть её можно будет остановить или удалить в любой момент
@@ -28,8 +27,9 @@
 <details>
 <summary> Скриншоты </summary>
 
-![img1.png](img/img1.png)
-![img2.png](img/img2.png)
+![img1](https://github.com/Tichenko/devops-netology/assets/116817153/20b93f06-28bd-46d4-8a01-10a1d753aeaa)
+
+![img2](https://github.com/Tichenko/devops-netology/assets/116817153/bbdb01ca-8315-4d3d-8d80-9e31f2fac9b7)
 </details>
 
 ### Задание 2
@@ -55,7 +55,7 @@
 
 Вывод команды ```terraform output```: 
 
-![img3.png](img/img3.png)
+![img3](https://github.com/Tichenko/devops-netology/assets/116817153/8fb342b4-7f40-43bb-90ad-279d807b3f63)
 
 ### Задание 5
 
