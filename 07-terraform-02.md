@@ -20,7 +20,6 @@
 
     Параметр ```core_fraction=5``` отвечает за уровень производительности vCPU. Виртуальные машины с уровнем производительности меньше 100% имеют доступ к вычислительной мощности физических ядер как минимум на протяжении указанного процента от единицы времени.
 
--------
 
 ### Вложения:
 
@@ -39,15 +38,13 @@
 3. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их default прежними значениями из main.tf.
 4. Проверьте terraform plan (изменений быть не должно).
 
-<<<<<<< HEAD
-Решение:[variables.tf](variables.tf/src)
-=======
-[Решение:variables.tf](variables.tf/02/src)
+Решение:[variables.tf](02/src/variables.tf)
+
 
 После изменения "хардкод значений" в terraform plan никаких изменений не появилось:
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/b7f2f2a5-b971-4a29-9c41-7b398f49d675)
 
->>>>>>> 8092a8ad1664bbe35e9aa2a4ee860448927df29c
+
 
 ### Задание 3 
 
@@ -55,7 +52,7 @@
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ(в файле main.tf): "netology-develop-platform-db" , cores = 2, memory = 2, core_fraction = 20. Объявите ее переменные с префиксом vm_db_ в том же файле('vms_platform.tf').
 3. Примените изменения.
 
-Решение файлы: [vms_platform.tf](variables.tf/02/src) и [main.tf](main.tf/02/src)
+Решение файлы: [vms_platform.tf](02/src/vms_platform.tf) и [main.tf](02/src/main.tf)
 
 ### Задание 4
 
@@ -74,9 +71,10 @@
 2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local переменные.
 3. Примените изменения.
 
-[Решение variables.tf,vms_platform.tf,main.tf](02/src)
+Решение: [variables.tf](02/src/variables.tf),[vms_platform.tf](02/src/vms_platform.tf),[main.tf](02/src/main.tf)
 
 Изменений в terraform plan не появилось:
+
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/1c9b05dd-f265-4d25-ad2e-2c84400ea61f)
 
 ### Задание 6
@@ -86,8 +84,9 @@
 3. Найдите и удалите все более не используемые переменные проекта.
 4. Проверьте terraform plan (изменений быть не должно).
 
-[Решение variables.tf,vms_platform.tf,main.tf](02/src)
+Решение: [variables.tf](02/src/variables.tf),[vms_platform.tf](02/src/vms_platform.tf),[main.tf](02/src/main.tf)
 
 Изменений в terraform plan не появилось:
+
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/610a163c-b5e5-467a-9f28-a60e779a165e)
 
