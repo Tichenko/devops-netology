@@ -68,3 +68,10 @@ No modules.
 
 ![img5](https://github.com/Tichenko/devops-netology/assets/116817153/5c37d8c2-1f76-4fc3-910b-2650ad8d6870)
 
+После устранения ошибки.
+
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/260a1308-185c-4d7d-927b-89cf94a1d083)
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/33b27bed-5b7d-41ad-af45-036ecd5c8a2d)
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/fd5aa544-81fd-418e-bd69-e02c9fb5f34f)
+
+
