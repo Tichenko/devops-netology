@@ -40,6 +40,7 @@
 4. Проверьте terraform plan (изменений быть не должно).
 
 {Решение variables.tf](02/src)
+
 После изменения "хардкод значений" в terraform plan никаких изменений не появилось:
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/b7f2f2a5-b971-4a29-9c41-7b398f49d675)
 
