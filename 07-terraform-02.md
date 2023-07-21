@@ -39,7 +39,7 @@
 3. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их default прежними значениями из main.tf.
 4. Проверьте terraform plan (изменений быть не должно).
 
-{Решение variables.tf](02/src)
+Решение:[variables.tf](variables.tf/src)
 
 ### Задание 3 
 
@@ -47,7 +47,7 @@
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ(в файле main.tf): "netology-develop-platform-db" , cores = 2, memory = 2, core_fraction = 20. Объявите ее переменные с префиксом vm_db_ в том же файле('vms_platform.tf').
 3. Примените изменения.
 
-[Решение файлы: vms_platform.tf и main.tf](02/src)
+Решение файлы: [vms_platform.tf](variables.tf/02/src) и [main.tf](main.tf/02/src)
 
 ### Задание 4
 
