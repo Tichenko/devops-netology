@@ -40,6 +40,9 @@
 4. Проверьте terraform plan (изменений быть не должно).
 
 {Решение variables.tf](02/src)
+После изменения "хардкод значений" в terraform plan никаких изменений не появилось:
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/b7f2f2a5-b971-4a29-9c41-7b398f49d675)
+
 
 ### Задание 3 
 
@@ -67,6 +70,10 @@
 3. Примените изменения.
 
 [Решение variables.tf,vms_platform.tf,main.tf](02/src)
+
+Изменений в terraform plan не появилось:
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/1c9b05dd-f265-4d25-ad2e-2c84400ea61f)
+
 ### Задание 6
 
 1. Вместо использования 3-х переменных ".._cores",".._memory",".._core_fraction" в блоке resources {...}, объедените их в переменные типа map с именами "vm_web_resources" и "vm_db_resources". В качестве продвинутой практики попробуйте создать одну map переменную vms_resources и уже внутри нее конфиги обеих ВМ(вложенный map).
@@ -75,3 +82,7 @@
 4. Проверьте terraform plan (изменений быть не должно).
 
 [Решение variables.tf,vms_platform.tf,main.tf](02/src)
+
+Изменений в terraform plan не появилось:
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/610a163c-b5e5-467a-9f28-a60e779a165e)
+
