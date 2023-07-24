@@ -91,53 +91,26 @@ postmaster invoked oom-killer
 Как бы вы решили данную проблему?
 
 * Ответ:
+Сообщение `postmaster invoked oom-killer` означает, что процесс postmaster был убит ядром из-за нехватки памяти в системе. Это может происходить из-за того, что СУБД использует слишком много памяти или из-за того, что другие процессы на сервере также используют много памяти.
 
-OOM Killer - процесс, который завершает приложение при нехватке памяти.
-Заканчивается свободная оперативная память которую выжырает Postgres.
+Чтобы исправить эту проблему, можно попробовать следующее:
 
-Для решения проблемы недостатка памяти необходимо:
+1. Увеличить объем памяти на сервере.
 
-- увеличить размер RAM на сервере
-- настроить PostgreSQL и выделить достаточный объём памяти
-- оптимизировать запросы и проверить наличие и состояние индексов
-- секционировать большие таблицы (партиционирование)
-- настроить swap на сервере (это немного замедлит работу, но поможет эффективно высвобождать ресурсы)
+2. Оптимизировать конфигурацию СУБД, чтобы она использовала меньше памяти.
 
-#### Дороботка "настроить PostgreSQL и выделить достаточный объём памяти".
+3. Ограничить использование памяти других процессов на сервере.
 
-* Установка:
+4. Разделить работу СУБД на несколько серверов, чтобы уменьшить нагрузку на каждый из них.
 
-```
-vagrant@server1:~$ sudo -i -u postgres
-postgres@server1:~$ psql
-psql (12.14 (Ubuntu 12.14-0ubuntu0.20.04.1))
-Type "help" for help.
+5. Использовать инструменты мониторинга и оптимизации для выявления и устранения утечек памяти в СУБД.
 
-postgres@server1:~$ systemctl status postgresql
-● postgresql.service - PostgreSQL RDBMS
-     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
-     Active: active (exited) since Wed 2023-04-12 14:46:56 UTC; 10min ago
-   Main PID: 4797 (code=exited, status=0/SUCCESS)
-      Tasks: 0 (limit: 1107)
-     Memory: 0B
-     CGroup: /system.slice/postgresql.service
+6. Проверить логи СУБД на наличие ошибок и проблем с работой.
 
-```
--Настройка.Создала пользователя и БД:
+* Настройка PostgreSQL:
+  
+![Screenshot_1](https://github.com/Tichenko/devops-netology/assets/116817153/2e25ca59-72a9-4a66-ad2d-e25cc0916cc7)
+![Screenshot_2](https://github.com/Tichenko/devops-netology/assets/116817153/b510a494-18f5-47ab-aa77-27d13629e75b)
+![Screenshot_4](https://github.com/Tichenko/devops-netology/assets/116817153/30b441f7-cab7-4b37-ab39-f55bb6e90560)
 
-```
-postgres=# \password postgres
-Enter new password for user "postgres":
-Enter it again:
-postgres=# create user info_comp with password '11111';
-CREATE ROLE
-postgres=# create database Test;
-CREATE DATABASE
-postgres=# grant all privileges on database Test to info_comp;
-GRANT
-postgres=# \q
-postgres@server1:~$
 
-```
-
-* Выделение памяти !?i
