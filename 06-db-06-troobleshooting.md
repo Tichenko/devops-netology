@@ -113,4 +113,16 @@ postmaster invoked oom-killer
 ![Screenshot_2](https://github.com/Tichenko/devops-netology/assets/116817153/b510a494-18f5-47ab-aa77-27d13629e75b)
 ![Screenshot_4](https://github.com/Tichenko/devops-netology/assets/116817153/30b441f7-cab7-4b37-ab39-f55bb6e90560)
 
+Дополнительно, выставила лимит на использование памяти сервисом постгрес, чтобы избежать срабатывания oom-killera. По сути, этого достаточно, тк в этом случае постгрес будет тормозить, но в падать с ошибкой перестанет (1-3 скриншоты)
+
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/3a68c977-932d-4353-9be7-0f77a8e54a98)
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/68723679-45f9-42a6-b9af-2af3b45157d3)
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/36e988f9-0b54-4c74-b7a8-dca2b804cdf3)
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/cb914b57-e6c2-417d-adff-e7fefc803f76)
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/a7f5db45-0bf8-4dc0-b5ef-91838a1d0d56)
+
+
+
+
+
 
