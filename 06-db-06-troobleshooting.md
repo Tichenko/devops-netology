@@ -123,6 +123,27 @@ postmaster invoked oom-killer
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/cb914b57-e6c2-417d-adff-e7fefc803f76)
 ![image](https://github.com/Tichenko/devops-netology/assets/116817153/a7f5db45-0bf8-4dc0-b5ef-91838a1d0d56)
 
+Программные варианты решения: 
+
+1. Установить лимиты по памяти для postgresql модификацией файла postgresql.conf:
+   В файле /etc/postgresql/12/main/postgresql.conf необходимо задать значения параметров shared_buffers и work_mem.
+    Мы видим, что значение параметра max_conections = 100, поэтому использование оперативной памяти не превысит 512 + 4 * 100 = 912MB
+2. Установка жесткого лимита на использование оперативной памяти процессами для всей системы командой ulimit (не рекомендуется, но может сработать)
+3. Командой systemctl set-property задать лимит на использование оперативной памяти сервисом postgresql
+Третий вариант аналогичен решению, которое присыно ранее. Альтернативной является создание файла вручную и указание в нем параметра MemoryLimit, где имя файла такое, как на скриншоте, или же override.conf (создается вручную или генерируется командой systemctl edit postgresql.service)
+Существуют разные варианты решения проблемы, рекомендуемый - первый, можно использовать 1 и 3 вместе. 2й не рекомендуется, тк он затрагивает всю систему целиком, а не только postgres.
+Также в вариантах 1 и 3 понадобится перезагрузка сервиса командой systemctl restart postgresql.service
+![Screenshot_32](https://github.com/Tichenko/devops-netology/assets/116817153/f555fe53-2b69-45e9-9c0f-5c2712aa5c87)
+![Screenshot_33](https://github.com/Tichenko/devops-netology/assets/116817153/05006d08-9934-47e3-a807-af428c7a7603)
+![Screenshot_31](https://github.com/Tichenko/devops-netology/assets/116817153/46daa692-77f0-40bd-ba4a-5dbcaeb5e9ef)
+
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/8f419b98-3b8d-44d9-bc93-dce4d29464b9)
+
+![image](https://github.com/Tichenko/devops-netology/assets/116817153/95600e6d-98ee-4723-b4c5-ba5d9bf8c85c)
+
+
+
+
 
 
 
